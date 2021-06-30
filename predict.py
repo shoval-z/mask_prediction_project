@@ -40,7 +40,7 @@ gdown.download(url, model_path, quiet=False)
 
 # Load Trained model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = torch.load('model.pth')
+model = torch.load(model_path)
 model.to(device)
 
 # create test loader
